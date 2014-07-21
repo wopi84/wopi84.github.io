@@ -1,1 +1,23 @@
-hello github
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="scripts/knockout-3.1.0.js"></script>
+<title>Test</title>
+</head>
+<body>
+<div class="liveExample">
+
+<p>First name: <input data-bind="value: firstName" /></p>
+<h2>Hello, <span data-bind="text: firstName"> </span>!</h2>
+
+<script type="text/javascript">
+    var ViewModel = function(name) {
+        this.firstName = ko.observable(name);
+    };
+
+    ko.applyBindings(new ViewModel("GitHub"));
+</script>
+</div>
+</body>
+</html>
